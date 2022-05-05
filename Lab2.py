@@ -29,11 +29,16 @@ def cal_average_temp(nums):
 def calc_min_max_temperature(nums):
     return [int(min(nums)), int(max(nums))]
 
-
+def calc_median_temperature(nums):
+    import statistics
+    return statistics.median(nums)
+def temperature_ascend(nums):
+    return sorted(nums)
 if __name__ == "__main__":
     main()
     display_main_menu()
     lists = get_user_input()
-
     print(cal_average_temp(lists))
     print(calc_min_max_temperature(lists))
+    print(temperature_ascend(lists))
+    print(calc_median_temperature(lists))
